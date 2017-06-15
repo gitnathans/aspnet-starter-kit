@@ -7,10 +7,13 @@
     "npm": ">=3.8"
   },
   "dependencies": {
+    "@sketchpixy/rubix": "^2.9.18",
     "babel-polyfill": "6.13.0",
+    "bless": "^3.0.3",
     "classnames": "2.2.5",
     "fastclick": "1.0.6",
     "history": "3.0.0",
+    "node-sass": "^4.5.3",
     "react": "15.4.1",
     "react-dom": "15.4.1",
     "react-mdl": "1.7.1",
@@ -124,6 +127,7 @@
     "lint": "npm run eslint && npm run stylelint",
     "test": "mocha \"client.test\" --compilers js:babel-register",
     "test:watch": "mocha \"client.test\" --compilers js:babel-register --reporter min --watch",
+    "sass": "node-sass --include-path ./node_modules --include-path ./public sass/main.scss src/main.css && blessc -f src/main.css",
     "clean": "node run clean",
     "build": "node run build",
     "build:debug": "node run build --debug",

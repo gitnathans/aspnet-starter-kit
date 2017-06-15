@@ -13,6 +13,8 @@ import Layout from '../../components/Layout';
 const title = 'ASP.NET Core Starter Kit';
 const link = 'https://github.com/kriasoft/aspnet-starter-kit';
 
+import { Button } from '@sketchpixy/rubix';
+
 class Home extends React.Component {
 
   static propTypes = {
@@ -36,6 +38,14 @@ class Home extends React.Component {
             <li key={i}><a href={article.url}>{article.title}</a> by {article.author}</li>
           )}
         </ul>
+        <p>
+          Adding some Rubix related code:
+        </p>
+        <div>
+          <div><Button bsStyle='green'>Green Button!</Button></div>
+          <div><Button bsStyle='red'>Red Button!</Button></div>
+          <div><Button bsStyle='blue' outlined>Blue Button!</Button></div>
+        </div>
       </Layout>
     );
   }

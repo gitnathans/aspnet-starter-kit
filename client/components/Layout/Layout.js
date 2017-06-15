@@ -5,11 +5,16 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
+ https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/254
  */
 
 import React from 'react';
 import Header from './Header';
 import s from './Layout.css';
+import './main.css';
+import './main-blessed1.css';
+import './main-blessed2.css';
+import './main-blessed3.css';
 
 class Layout extends React.Component {
 
