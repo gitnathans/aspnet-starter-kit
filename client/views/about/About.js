@@ -9,6 +9,9 @@
 
 import React from 'react';
 import Layout from '../../components/Layout';
+import rubixStyle from './main.css';
+import { Button } from '@sketchpixy/rubix';
+
 
 class About extends React.Component {
 
@@ -23,6 +26,7 @@ class About extends React.Component {
         <p className="mdl-typography--body-1">
           Coming soon.
         </p>
+        <div><Button bsStyle='green'>Green Button!</Button></div>
       </Layout>
     );
   }

@@ -10,11 +10,7 @@
 
 import React from 'react';
 import Header from './Header';
-import s from './Layout.css';
-import './main.css';
-import './main-blessed1.css';
-import './main-blessed2.css';
-import './main-blessed3.css';
+//import s from './Layout.css';
 
 class Layout extends React.Component {
 
@@ -30,16 +26,16 @@ class Layout extends React.Component {
     return (
       <div className="mdl-layout mdl-js-layout" ref={node => { this.root = node; }}>
         <div className="mdl-layout__inner-container">
-          <div className={s.ribbon}>
+          <div className="Layout_ribbon_v45">
             <Header />
-            <div className={s.container}>
-              <h1 className={`mdl-typography--title ${s.tagline}`}>ASP.NET Core Starter Kit</h1>
-              <p className={`mdl-typography--body-1 ${s.summary}`}>
+            <div>
+              <h1 className={`mdl-typography--title `}>ASP.NET Core Starter Kit</h1>
+              <p className={`mdl-typography--body-1 `}>
                 Single-page application boilerplate powered by .NET Core and React
               </p>
             </div>
           </div>
-          <main {...this.props} className={s.content} />
+          <main {...this.props}/>
         </div>
       </div>
     );
