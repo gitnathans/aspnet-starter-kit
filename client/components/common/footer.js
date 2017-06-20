@@ -9,9 +9,7 @@
 
 import React from 'react';
 import Link from '../Link';
-import Navigation from './Navigation';
-import Logo from './Logo';
-import s from './Header.css';
+import Navigation from '../Layout/Navigation';
 
 class Header extends React.Component {
 
@@ -28,10 +26,9 @@ class Header extends React.Component {
       <header
         ref={node => { this.root = node; }}
       >
-      <p>Net Header</p>
+      <p>Footer</p>
         <div>
           <Link className="mdl-layout-title" to="/">
-            <Logo height={48} />
           </Link>
           <div className="mdl-layout-spacer" />
           <Navigation />

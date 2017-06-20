@@ -7,13 +7,14 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Link from '../Link';
-import Navigation from './Navigation';
-import Logo from './Logo';
-import s from './Header.css';
+import React, { PropTypes } from 'react';
+import cx from 'classnames';
 
-class Header extends React.Component {
+class Button extends React.Component {
+
+  static propTypes = {
+    className: PropTypes.string,
+  };
 
   componentDidMount() {
     window.componentHandler.upgradeElement(this.root);
@@ -24,22 +25,14 @@ class Header extends React.Component {
   }
 
   render() {
+    const { className, ...other } = this.props;
     return (
-      <header
+      <button
         ref={node => { this.root = node; }}
-      >
-      <p>Net Header</p>
-        <div>
-          <Link className="mdl-layout-title" to="/">
-            <Logo height={48} />
-          </Link>
-          <div className="mdl-layout-spacer" />
-          <Navigation />
-        </div>
-      </header>
+        className={cx('mdl-button mdl-js-button', className)} {...other}
+      />
     );
   }
-
 }
 
-export default Header;
+export default Button;

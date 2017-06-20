@@ -1,5 +1,5 @@
-$img-path: '/public/imgs/common';
-$font-path: '/public/fonts';
+$img-path: 'http://localhost:5000/public/imgs/common';
+$font-path: 'http://localhost:5000/public/fonts';
 $bootstrap-sass-asset-helper: true;
 $icon-font-path: '/fonts/glyphicon/'; // only for glyphicon
 $grid-gutter-width: 50px;
