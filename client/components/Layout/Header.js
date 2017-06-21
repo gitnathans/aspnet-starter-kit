@@ -11,7 +11,7 @@ import React from 'react';
 import Link from '../Link';
 import Navigation from './Navigation';
 import Logo from './Logo';
-import s from './Header.css';
+//import s from './Header.css';
 
 class Header extends React.Component {
 

@@ -13,7 +13,7 @@ import NetHeader from './Header';
 
 import Footer from '../common/footer';
 import Header from '../common/header';
-
+import Sidebar from '../common/sidebar';
 
 import './main.css';
 
@@ -35,11 +35,17 @@ class Layout extends React.Component {
         <MainContainer>
 
           <Header />
-          <div ref={node => { this.root = node; }}>
-            <div>
-              <main {...this.props}  />
-            </div>
+          <div id='body' ref={node => { this.root = node; }}>
+            <Grid>
+              <Row>
+                <Col xs={12}>
+                  <NetHeader />
+                  <main {...this.props}  />
+                </Col>
+              </Row>
+            </Grid>
           </div>
+
         </MainContainer>
       </div>
     );

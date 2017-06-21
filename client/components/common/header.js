@@ -31,28 +31,25 @@ class Header extends React.Component {
       <header
         ref={node => { this.root = node; }}
       >
-      <Grid id='navbar' {...this.props}>
-        <Row>
-          <Col xs={12}>
-            <Navbar fixedTop fluid id='rubix-nav-header'>
-              <Row>
-              <Col xs={6} sm={4}>
-                <Brand />
-              </Col>
-              </Row>
-            </Navbar>
-          </Col>
-        </Row>
-      </Grid>
-
-      <p>Net Header</p>
-        <div>
-          <Link className="mdl-layout-title" to="/">
-            <Logo height={48} />
-          </Link>
-          <div className="mdl-layout-spacer" />
-          <Navigation />
-        </div>
+        <Grid id='navbar' {...this.props}>
+          <Row>
+            <Col xs={12}>
+              <Navbar fixedTop fluid id='rubix-nav-header'>
+                <Row>
+                <Col xs={3} visible='xs'>
+                  <SidebarBtn />
+                </Col>
+                <Col xs={6} sm={4}>
+                  <Brand />
+                </Col>
+                <Col xs={3} sm={8} collapseRight className='text-right'>
+                  <HeaderNavigation />
+                </Col>
+                </Row>
+              </Navbar>
+            </Col>
+          </Row>
+        </Grid>
       </header>
     );
   }
@@ -77,13 +74,10 @@ class Brand extends React.Component {
 
 class HeaderNavigation extends React.Component {
   render() {
-    var props = {
-      ...this.props,
-      className: classNames('pull-right', this.props.className)
-    };
+
 
     return (
-      <Nav {...props}>
+      <Nav>
         <NavItem className='logout' href='#'>
           <Icon bundle='fontello' glyph='off-1' />
         </NavItem>

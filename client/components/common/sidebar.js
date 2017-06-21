@@ -1,22 +1,3 @@
-/**
- * ASP.NET Core Starter Kit (https://dotnetreact.com)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
-
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-
-
-
 import React from 'react';
 
 import {
@@ -28,7 +9,8 @@ import {
 } from '@sketchpixy/rubix';
 
 
-class ApplicationSidebar extends React.Component {
+export default class SidebarContainer extends React.Component {
+
   componentDidMount() {
     window.componentHandler.upgradeElement(this.root);
   }
@@ -37,47 +19,6 @@ class ApplicationSidebar extends React.Component {
     window.componentHandler.downgradeElements(this.root);
   }
 
-  render() {
-    return (
-      <div>
-        <Grid>
-          <Row>
-            <Col xs={12}>
-
-              <div className='sidebar-nav-container'>
-                <SidebarNav style={{marginBottom: 0}} ref={(c) => this._nav = c}>
-
-                  { /** Pages Section */ }
-                  <div className='sidebar-header'>PAGES</div>
-
-                  <SidebarNavItem glyph='icon-fontello-gauge' name='Home' href='/' />
-                </SidebarNav>
-              </div>
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-    );
-  }
-}
-
-class DummySidebar extends React.Component {
-  render() {
-    return (
-      <Grid>
-        <Row>
-          <Col xs={12}>
-            <div className='sidebar-header'>DUMMY SIDEBAR</div>
-            <LoremIpsum query='1p' />
-          </Col>
-        </Row>
-      </Grid>
-    );
-  }
-}
-
-
-export default class SidebarContainer extends React.Component {
   render() {
     return (
       <div id='sidebar'>
@@ -124,6 +65,47 @@ export default class SidebarContainer extends React.Component {
           </Sidebar>
         </div>
       </div>
+    );
+  }
+}
+
+class ApplicationSidebar extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <Grid>
+          <Row>
+            <Col xs={12}>
+
+              <div className='sidebar-nav-container'>
+                <SidebarNav style={{marginBottom: 0}} ref={(c) => this._nav = c}>
+
+                  { /** Pages Section */ }
+                  <div className='sidebar-header'>PAGES</div>
+
+                  <SidebarNavItem glyph='icon-fontello-gauge' name='Home' href='/' />
+                </SidebarNav>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+    );
+  }
+}
+
+class DummySidebar extends React.Component {
+  render() {
+    return (
+      <Grid>
+        <Row>
+          <Col xs={12}>
+            <div className='sidebar-header'>DUMMY SIDEBAR</div>
+            <LoremIpsum query='1p' />
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }
