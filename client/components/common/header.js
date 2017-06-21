@@ -12,9 +12,7 @@ import Link from '../Link';
 import Navigation from '../Layout/Navigation';
 import Logo from '../Layout/Logo';
 
-import '../Layout/main.css';
-
-import { SidebarBtn, Navbar, Nav, NavItem, Icon, Grid, Row, Col } from '@sketchpixy/rubix';
+import { Sidebar, SidebarBtn, Navbar, Nav, NavItem, Icon, Grid, Row, Col } from '@sketchpixy/rubix';
 
 class Header extends React.Component {
 
@@ -28,29 +26,35 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header
+      <div
         ref={node => { this.root = node; }}
+        id='navbar'
       >
-        <Grid id='navbar' {...this.props}>
+        <Grid>
           <Row>
             <Col xs={12}>
               <Navbar fixedTop fluid id='rubix-nav-header'>
                 <Row>
-                <Col xs={3} visible='xs'>
-                  <SidebarBtn />
-                </Col>
-                <Col xs={6} sm={4}>
-                  <Brand />
-                </Col>
-                <Col xs={3} sm={8} collapseRight className='text-right'>
-                  <HeaderNavigation />
-                </Col>
+                  <Col xs={3} visible='xs'>
+                    <SidebarBtn />
+                  </Col>
+                {/*
+                  <Col xs={3} visible='xs'>
+                    <SidebarBtn />
+                  </Col>
+                  <Col xs={6} sm={4}>
+                    <Brand />
+                  </Col>
+                  <Col xs={3} sm={8} collapseRight className='text-right'>
+                    <HeaderNavigation />
+                  </Col>
+                */}
                 </Row>
               </Navbar>
             </Col>
           </Row>
         </Grid>
-      </header>
+      </div>
     );
   }
 

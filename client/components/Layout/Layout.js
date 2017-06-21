@@ -33,7 +33,7 @@ class Layout extends React.Component {
     return (
       <div>
         <MainContainer>
-
+          <Sidebar />
           <Header />
           <div id='body' ref={node => { this.root = node; }}>
             <Grid>

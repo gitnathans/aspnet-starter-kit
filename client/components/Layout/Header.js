@@ -25,18 +25,11 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header
+      <div
         ref={node => { this.root = node; }}
       >
-      <p>Net Header</p>
-        <div>
-          <Link className="mdl-layout-title" to="/">
-            <Logo height={48} />
-          </Link>
-          <div className="mdl-layout-spacer" />
-          <Navigation />
-        </div>
-      </header>
+        <Navigation />
+      </div>
     );
   }
 
